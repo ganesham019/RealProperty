@@ -1,0 +1,14 @@
+$sm-width : 480px;
+$md-width : 780px;
+$lg-width: 1200px;
+$xl-width: 1400px;
+
+
+
+$breakpoints: (
+  "mobile": 480px,
+  "tablet": 780px,
+  "midbreak" : 1000px,
+  "laptop": 1200px,
+  "desktop": 1400px,
+);

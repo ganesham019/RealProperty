@@ -1,0 +1,259 @@
+nav {
+  position: fixed;
+  top: 0px;
+  z-index: $z-index-high;
+  background-color: $primary;
+  width: 100%;
+  margin: auto;
+  .burger_btn {
+    visibility: hidden;
+  }
+  .nav_box {
+    @include flexBetween;
+  }
+  .nav_wrapper {
+    position: relative;
+    width: 100%;
+    @include flexBetween;
+    &.container {
+      padding: 20px;
+    }
+    a img {
+      margin-right: 50px;
+      width: 160px;
+      height: auto;
+    }
+    .nav_right_sec {
+      width: 100%;
+      @include flexBetween;
+      .nav_menus {
+        @include flexBetween;
+        .nav_menu__item {
+          cursor: pointer;
+          font-family: OpenSans-Bold;
+          font-weight: 400;
+          font-size: $font-size-small;
+          a {
+            text-decoration: none;
+            color: $light;
+          }
+          &:not(:last-child) {
+            margin-right: 40px;
+          }
+        }
+      }
+      .nav_icon_sec {
+        a {
+          cursor: pointer;
+          svg {
+            width: 25px;
+            height: auto;
+          }
+          svg path {
+            fill: $light;
+          }
+          &:not(:last-child) {
+            margin-right: 30px;
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint(map-get($breakpoints, "laptop")) {
+    .burger_btn {
+      cursor: pointer;
+      visibility: visible;
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      z-index: 12;
+      width: 28px;
+      height: 2px;
+      background-color: $light;
+      @include transitionEase;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 28px;
+        height: 2px;
+        top: -8px;
+        background-color: $light;
+        @include transitionEase;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 2px;
+        top: 8px;
+        background-color: $light;
+        @include transitionEase;
+      }
+      &.open {
+        transform: rotate(720deg);
+        @include transitionEase;
+        background-color: transparent;
+        &::before {
+          transform: rotate(45deg) translate(5px, 8px);
+        }
+        &::after {
+          width: 28px;
+          transform: rotate(-45deg) translate(3px, -7px);
+        }
+      }
+    }
+    .nav_wrapper {
+      a {
+        img {
+          width: 135px;
+        }
+      }
+      &.container {
+        padding: 10px 20px;
+      }
+      .nav_right_sec {
+        background-color: $light;
+        position: absolute;
+        top: 58px;
+        left: 0px;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        @include transitionEase;
+        transform: translate(-150%);
+        .nav_menus {
+          flex-direction: column;
+          .nav_menu__item {
+            margin: 20px;
+            a {
+              color: $primary;
+            }
+            &:not(:last-child) {
+              margin-right: 20px;
+            }
+          }
+        }
+        .nav_icon_sec {
+          margin: auto;
+          @include flexCenter;
+          flex-direction: column;
+          a {
+            cursor: pointer;
+            margin: 20px !important;
+            svg path {
+              fill: $primary;
+            }
+          }
+        }
+        &.open {
+          @include transitionEase;
+          transform: translate(0%);
+        }
+      }
+    }
+  }
+
+  //    @include breakpoint(map-get($breakpoints, "laptop")) {
+  //    .nav{
+  //     .burger_btn {
+  //         visibility: visible;
+  //         position: absolute;
+  //         top: 40px;
+  //         right: 40px;
+  //         z-index: 12;
+  //         width: 28px;
+  //         height: 2px;
+  //         background-color: $light;
+  //         @include transitionEase;
+
+  //         &::before {
+  //           position: absolute;
+  //           content: "";
+  //           width: 28px;
+  //           height: 2px;
+  //           top: -8px;
+  //           background-color: $light;
+  //           @include transitionEase;
+  //         }
+  //         &::after {
+  //           position: absolute;
+  //           content: "";
+  //           width: 20px;
+  //           height: 2px;
+  //           top: 8px;
+  //           background-color: $light;
+  //           @include transitionEase;
+  //         }
+  //         &.open {
+  //           transform: rotate(720deg);
+  //           @include transitionEase;
+  //           background-color: transparent;
+  //           &::before {
+  //             transform: rotate(45deg) translate(5px, 8px);
+  //           }
+  //           &::after {
+  //             width: 28px;
+  //             transform: rotate(-45deg) translate(3px, -7px);
+  //           }
+  //         }
+  //       }
+  //    }
+  // }
+  //   @include breakpoint(map-get($breakpoints, "laptop")) {
+  //     .nav_box {
+  //       &.container {
+  //         padding: 20px 0px;
+  //         .nav_wrapper {
+  //           a {
+  //             img {
+  //               padding-left: 20px;
+  //             }
+  //           }
+  //         }
+
+  //         .nav_right_sec {
+  //           height: 100vh;
+  //           width: 100%;
+  //           background-color: $light;
+  //           position: absolute;
+  //           top: 60px;
+  //           transform: translateX(-125%);
+  //           flex-direction: column;
+  //           @include transitionEase;
+  //           .nav_menus {
+  //             flex-direction: column;
+  //             .nav_menu__item {
+  //               margin: 20px 0px;
+  //               a {
+  //                 font-size: $font-size-regular;
+  //                 color: $primary;
+  //               }
+  //               &:not(:last-child) {
+  //                 margin-right: 0px;
+  //               }
+  //             }
+  //           }
+  //           .nav_icon_sec {
+  //             @include flexCenter;
+  //             flex-direction: column;
+  //             cursor: pointer;
+  //             a {
+  //               svg path {
+  //                 fill: $primary;
+  //               }
+  //               &:not(:last-child) {
+  //                 margin-right: 0px;
+  //               }
+  //             }
+  //           }
+  //           &.open {
+  //             @include transitionEase;
+  //             transform: translateX(0%);
+  //             @include flexCenter;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+}

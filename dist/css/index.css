@@ -1,0 +1,533 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,
+ul,
+li {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+@font-face {
+    src: url(../images/OpenSans-Bold.45847e90261782dc01a6.ttf) format("truetype");
+    font-family: "OpenSans-Bold";
+    font-weight: bold
+}
+
+@font-face {
+    src: url(../images/OpenSans-SemiBold.dcf2e322dbaa037ca821.ttf) format("truetype");
+    font-family: "OpenSans-SemiBold";
+    font-weight: bold
+}
+
+@font-face {
+    src: url(../images/OpenSans-Regular.9a6cfa5890d7f3eef585.ttf) format("truetype");
+    font-family: "OpenSans";
+    font-weight: normal
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin: 0px auto
+}
+
+.text-center {
+    text-align: center
+}
+
+.mg-auto {
+    margin: auto
+}
+
+.fx {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.mr-auto {
+    margin-right: auto
+}
+
+.m-1 {
+    margin: 10px
+}
+
+.m-2 {
+    margin: 20px
+}
+
+.m-3 {
+    margin: 30px
+}
+
+.m-4 {
+    margin: 40px
+}
+
+.m-5 {
+    margin: 50px
+}
+
+.m-10 {
+    margin: 100px
+}
+
+.mb-1 {
+    margin-bottom: 10px
+}
+
+.mb-2 {
+    margin-bottom: 20px
+}
+
+.mb-3 {
+    margin-bottom: 30px
+}
+
+.mb-4 {
+    margin-bottom: 40px
+}
+
+.mb-5 {
+    margin-bottom: 50px
+}
+
+.mb-10 {
+    margin-bottom: 100px
+}
+
+.text-primary {
+    color: #004dff
+}
+
+.bg-primary {
+    background-color: #004dff
+}
+
+.text-success {
+    color: #1dc679
+}
+
+.bg-success {
+    background-color: #1dc679
+}
+
+.text-muted {
+    color: rgba(69, 69, 69, .5725490196)
+}
+
+.bg-muted {
+    background-color: rgba(69, 69, 69, .5725490196)
+}
+
+.text-dark {
+    color: #000
+}
+
+.bg-dark {
+    background-color: #000
+}
+
+.text-light {
+    color: #fff
+}
+
+.bg-light {
+    background-color: #fff
+}
+
+.text-yellow {
+    color: #ff9f00
+}
+
+.bg-yellow {
+    background-color: #ff9f00
+}
+
+.text-gray {
+    color: #f6f7f9
+}
+
+.bg-gray {
+    background-color: #f6f7f9
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    margin: auto
+}
+
+nav .burger_btn {
+    visibility: hidden
+}
+
+nav .nav_box {
+    padding: 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+nav .nav_wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+nav .nav_wrapper a img {
+    margin-right: 50px;
+    width: 160px;
+    height: auto
+}
+
+nav .nav_menus {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+nav .nav_menus .nav_menu__item {
+    cursor: pointer;
+    font-family: OpenSans-Bold;
+    font-weight: 400;
+    font-size: 14px
+}
+
+nav .nav_menus .nav_menu__item a {
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    color: #fff
+}
+
+nav .nav_menus .nav_menu__item:not(:last-child) {
+    margin-right: 40px
+}
+
+nav .nav_icon_sec {
+    margin-left: auto;
+    cursor: pointer
+}
+
+nav .nav_icon_sec a svg {
+    width: 25px;
+    height: auto
+}
+
+nav .nav_icon_sec a svg path {
+    fill: #fff
+}
+
+nav .nav_icon_sec a:not(:last-child) {
+    margin-right: 30px
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    max-height: 660px;
+    position: relative
+}
+
+.hero.hero_bg {
+    background-image: url(../images/background.a9097aa48de7369953f8.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.hero .hero_content {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    color: #fff
+}
+
+.hero .hero_content .hero_title {
+    font-family: OpenSans-Bold;
+    font-size: 44px;
+    font-weight: bold
+}
+
+.hero .hero_content .hero_desc {
+    font-family: OpenSans-Bold;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.sell_property .sell_wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.sell_property .sell_wrapper .sell_card {
+    height: 350px;
+    width: 100%;
+    padding: 46px;
+    border-radius: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.sell_property .sell_wrapper .sell_card h3 {
+    font-family: OpenSans-Bold;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 380px
+}
+
+.sell_property .sell_wrapper .sell_card p {
+    font-family: OpenSans;
+    font-size: 18px;
+    line-height: 1.4;
+    max-width: 330px;
+    color: rgba(69, 69, 69, .5725490196)
+}
+
+.sell_property .sell_wrapper .sell_card:last-child p {
+    color: #fff
+}
+
+.sell_property .sell_wrapper .sell_card:not(:last-child) {
+    margin-right: 36px
+}
+
+@media(max-width: 480px) {
+    .sell_property .sell_wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+}
+
+.featured_property_sec h4 {
+    font-family: OpenSans-Bold;
+    font-size: 32px
+}
+
+.home_sale_sec {
+    position: relative;
+    background-image: url(../images/Home@2x.bae70a45bf53991b0d9f.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.home_sale_sec .container {
+    padding: 130px 0px 130px 0px
+}
+
+.home_sale_sec .villa_sale_card,
+.home_sale_sec .villa_detail_card {
+    width: 540px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px
+}
+
+.home_sale_sec .villa_sale_card .villa_heading,
+.home_sale_sec .villa_detail_card .villa_heading {
+    font-family: OpenSans-semiBold;
+    font-size: 32px;
+    font-weight: normal
+}
+
+.home_sale_sec .villa_sale_card .villa_price,
+.home_sale_sec .villa_detail_card .villa_price {
+    font-family: OpenSans-Bold;
+    font-size: 24px;
+    font-weight: bold
+}
+
+.home_sale_sec .villa_sale_card .villa_facilities,
+.home_sale_sec .villa_detail_card .villa_facilities {
+    max-width: 320px;
+    font-family: OpenSans
+}
+
+.home_sale_sec .villa_sale_card .villa_facilities ul,
+.home_sale_sec .villa_detail_card .villa_facilities ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.home_sale_sec .villa_sale_card .villa_facilities ul li,
+.home_sale_sec .villa_detail_card .villa_facilities ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.home_sale_sec .villa_sale_card .villa_facilities ul li:last-child svg,
+.home_sale_sec .villa_detail_card .villa_facilities ul li:last-child svg {
+    height: 22px
+}
+
+.home_sale_sec .villa_sale_card .villa_facilities ul span svg,
+.home_sale_sec .villa_detail_card .villa_facilities ul span svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px
+}
+
+.home_sale_sec .villa_sale_card .villa_facilities ul span svg path,
+.home_sale_sec .villa_detail_card .villa_facilities ul span svg path {
+    fill: rgba(69, 69, 69, .5725490196)
+}
+
+.home_sale_sec .villa_detail_card {
+    padding: 20px 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-family: OpenSans
+}
+
+.home_sale_sec .villa_detail_card img {
+    width: 80px;
+    height: auto;
+    margin-right: 26px;
+    border-radius: 10px
+}
+
+.home_sale_sec .villa_detail_card ul {
+    margin-right: auto
+}
+
+.home_sale_sec .villa_detail_card ul li {
+    line-height: 1
+}
+
+.home_sale_sec .villa_detail_card ul li:not(:last-child) {
+    font-size: 18px
+}
+
+.home_sale_sec .villa_detail_card ul li:last-child {
+    font-size: 14px
+}
+
+footer {
+    padding: 35px 0px
+}
+
+footer img {
+    width: 160px;
+    height: auto
+}
+
+footer p {
+    font-family: OpenSans;
+    font-size: 14px;
+    width: 50%;
+    line-height: 1.3
+}
+
+/*# sourceMappingURL=index.css.map*/
