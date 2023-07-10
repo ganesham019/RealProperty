@@ -1,8 +1,14 @@
 nav {
-  position: fixed;
+  position: absolute;
   top: 0px;
   z-index: $z-index-high;
-  background-color: $primary;
+  &.navbar-theme {
+    position: fixed;
+    top: 0;
+    z-index: $z-index-high;
+    background-color: $primary;
+    @include transitionEase;
+  }
   width: 100%;
   margin: auto;
   .burger_btn {
@@ -29,6 +35,7 @@ nav {
       .nav_menus {
         @include flexBetween;
         .nav_menu__item {
+          position: relative;
           cursor: pointer;
           font-family: OpenSans-Bold;
           font-weight: 400;
@@ -40,6 +47,22 @@ nav {
           &:not(:last-child) {
             margin-right: 40px;
           }
+          &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            left: 0px;
+            top: 24px;
+            width: 0%;
+            height: 2px;
+            margin: 0 auto;
+            background-color: $light;
+            transition: all 0.3s ease-in-out;
+          }
+          &:hover::after {
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+          }
         }
       }
       .nav_icon_sec {
@@ -48,10 +71,11 @@ nav {
           svg {
             width: 25px;
             height: auto;
+            path {
+              fill: $light;
+            }
           }
-          svg path {
-            fill: $light;
-          }
+
           &:not(:last-child) {
             margin-right: 30px;
           }
@@ -117,15 +141,18 @@ nav {
         position: absolute;
         top: 58px;
         left: 0px;
-        height: 100vh;
+        height: 94vh;
         width: 100%;
         flex-direction: column;
         @include transitionEase;
         transform: translate(-150%);
         .nav_menus {
           flex-direction: column;
+          width: 100%;
           .nav_menu__item {
-            margin: 20px;
+            margin: 30px;
+            width: 100%;
+            text-align: center;
             a {
               color: $primary;
             }
@@ -153,107 +180,4 @@ nav {
       }
     }
   }
-
-  //    @include breakpoint(map-get($breakpoints, "laptop")) {
-  //    .nav{
-  //     .burger_btn {
-  //         visibility: visible;
-  //         position: absolute;
-  //         top: 40px;
-  //         right: 40px;
-  //         z-index: 12;
-  //         width: 28px;
-  //         height: 2px;
-  //         background-color: $light;
-  //         @include transitionEase;
-
-  //         &::before {
-  //           position: absolute;
-  //           content: "";
-  //           width: 28px;
-  //           height: 2px;
-  //           top: -8px;
-  //           background-color: $light;
-  //           @include transitionEase;
-  //         }
-  //         &::after {
-  //           position: absolute;
-  //           content: "";
-  //           width: 20px;
-  //           height: 2px;
-  //           top: 8px;
-  //           background-color: $light;
-  //           @include transitionEase;
-  //         }
-  //         &.open {
-  //           transform: rotate(720deg);
-  //           @include transitionEase;
-  //           background-color: transparent;
-  //           &::before {
-  //             transform: rotate(45deg) translate(5px, 8px);
-  //           }
-  //           &::after {
-  //             width: 28px;
-  //             transform: rotate(-45deg) translate(3px, -7px);
-  //           }
-  //         }
-  //       }
-  //    }
-  // }
-  //   @include breakpoint(map-get($breakpoints, "laptop")) {
-  //     .nav_box {
-  //       &.container {
-  //         padding: 20px 0px;
-  //         .nav_wrapper {
-  //           a {
-  //             img {
-  //               padding-left: 20px;
-  //             }
-  //           }
-  //         }
-
-  //         .nav_right_sec {
-  //           height: 100vh;
-  //           width: 100%;
-  //           background-color: $light;
-  //           position: absolute;
-  //           top: 60px;
-  //           transform: translateX(-125%);
-  //           flex-direction: column;
-  //           @include transitionEase;
-  //           .nav_menus {
-  //             flex-direction: column;
-  //             .nav_menu__item {
-  //               margin: 20px 0px;
-  //               a {
-  //                 font-size: $font-size-regular;
-  //                 color: $primary;
-  //               }
-  //               &:not(:last-child) {
-  //                 margin-right: 0px;
-  //               }
-  //             }
-  //           }
-  //           .nav_icon_sec {
-  //             @include flexCenter;
-  //             flex-direction: column;
-  //             cursor: pointer;
-  //             a {
-  //               svg path {
-  //                 fill: $primary;
-  //               }
-  //               &:not(:last-child) {
-  //                 margin-right: 0px;
-  //               }
-  //             }
-  //           }
-  //           &.open {
-  //             @include transitionEase;
-  //             transform: translateX(0%);
-  //             @include flexCenter;
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
 }

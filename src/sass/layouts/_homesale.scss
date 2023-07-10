@@ -12,7 +12,16 @@
     background-color: $light;
     padding: 50px;
     border-radius: 5px;
-  @include transitionEase;
+    .btn-primary {
+      @include button($primary);
+    }
+    @include transitionEase;
+    .btn-sale {
+      @include button($yellow);
+      border-radius: 5px;
+      padding: 6px 20px;
+      font-size: $font-size-small;
+    }
     .villa_heading {
       font-family: OpenSans-semiBold;
       font-size: $font-size-md;
@@ -30,9 +39,10 @@
     .villa_facilities {
       font-family: OpenSans;
       ul {
-        max-width: 320px;
+        max-width: 350px;
         @include flexBetween;
         li {
+          margin-right: 10px;
           font-size: $font-size-regular;
           @include flexBetween;
           &:last-child svg {
@@ -43,9 +53,14 @@
           svg {
             width: 30px;
             height: 30px;
-            margin-right: 10px;
+            margin-right: 5px;
             path {
-              fill: $muted;
+              fill: $dark;
+            }
+            :hover{
+              path{
+                fill:$primary;
+              }
             }
           }
         }
@@ -57,7 +72,7 @@
     @include breakpoint(map-get($breakpoints, "tablet")) {
       width: 80%;
       padding: 32px;
-      @include margin-lr-auto;
+      margin-inline: auto;
       .villa_heading {
         font-size: $font-size-regular;
       }
@@ -102,12 +117,12 @@
     }
   }
   @include breakpoint(map-get($breakpoints, "laptop")) {
-    .container{
+    .container {
       padding: 100px 20px;
     }
   }
   @include breakpoint(map-get($breakpoints, "mobile")) {
-    .container{
+    .container {
       padding: 80px 0px;
     }
   }
@@ -137,9 +152,10 @@
     @include breakpoint(map-get($breakpoints, "mobile")) {
       width: 90%;
       padding: 20px;
-      @include margin-lr-auto;
+      margin-inline: auto;
       gap: 24px;
-     img, ul{
+      img,
+      ul {
         margin: auto;
       }
       flex-direction: column;

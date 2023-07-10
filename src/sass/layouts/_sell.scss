@@ -21,6 +21,9 @@
         max-width: 330px;
         color: $muted;
       }
+      .contact-btn{
+        @include button($success);
+      }
       &:last-child {
         p {
           color: $light;

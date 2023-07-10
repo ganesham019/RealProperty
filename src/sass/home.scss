@@ -1,4 +1,7 @@
 @import "base/reset";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 @import "base/breakpoints";
 @import './base/typography';
 @import "./abstracts/variable";
@@ -8,6 +11,6 @@
 @import './layouts/hero';
 @import './layouts/sell';
 @import './layouts/feature';
+@import './layouts/swiper';
 @import './layouts/homesale';
 @import './layouts/footer';
-
