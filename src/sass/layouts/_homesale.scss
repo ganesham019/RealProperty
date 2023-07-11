@@ -4,9 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  .container {
-    padding: 130px 0px;
-  }
+  padding: 120px 0px;
   .villa_sale_card {
     width: 50%;
     background-color: $light;
@@ -93,7 +91,7 @@
       }
     }
     @include breakpoint(map-get($breakpoints, "mobile")) {
-      width: 90%;
+      width: 100%;
       padding: 20px;
       .villa_heading {
         font-size: $font-size-regular;
@@ -116,16 +114,6 @@
       }
     }
   }
-  @include breakpoint(map-get($breakpoints, "laptop")) {
-    .container {
-      padding: 100px 20px;
-    }
-  }
-  @include breakpoint(map-get($breakpoints, "mobile")) {
-    .container {
-      padding: 80px 0px;
-    }
-  }
   .villa_detail_card {
     @extend .villa_sale_card;
     padding: 20px 50px;
@@ -137,20 +125,19 @@
       margin-right: 26px;
       border-radius: 10px;
     }
+    .btn-primary{
+      padding: 10px 20px;
+      font-size: $font-size-small;
+    }
     ul {
       margin-right: auto;
       li {
         line-height: 1;
-        &:not(:last-child) {
-          font-size: $font-size-regular;
-        }
-        &:last-child {
-          font-size: $font-size-small;
-        }
+        font-size: $font-size-small;
       }
     }
     @include breakpoint(map-get($breakpoints, "mobile")) {
-      width: 90%;
+      width: 100%;
       padding: 20px;
       margin-inline: auto;
       gap: 24px;

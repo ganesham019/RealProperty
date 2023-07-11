@@ -55,12 +55,14 @@
     }
    
     &.swiper-slide-prev {
+      filter: blur(3px);
       opacity: 1;
       @include transitionEase;
     }
     &.swiper-slide-next {
       left: -40px;
       opacity: 1;
+      filter: blur(3px);
       @include transitionEase;
     }
     &.swiper-slide-active {

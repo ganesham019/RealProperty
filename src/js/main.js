@@ -23,10 +23,9 @@ burgerBtn.addEventListener('click', function () {
 //  Initialize Swiper
 let swiper = new Swiper(".swiper", {
     modules: [Navigation, Pagination],
-    slidesPerView: 1,
     loop: true,
     centeredSlides: true,
-    grabCursor: true,
+    grabCursor: false,
     speed: 1000,
     navigation: {
         nextEl: ".swiper-button-next",
