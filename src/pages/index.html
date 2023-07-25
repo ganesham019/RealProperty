@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="../images/favicon-ico.png" />
     <title>Sell Property</title>
@@ -15,14 +14,10 @@
         <section class="nav_box">
           <section class="nav_wrapper container" id="nav_wrapper">
             <a href="javascript:void(0)">
-              <source
-                srcset="
-                  ../images/logo.png    500w,
-                  ../images/logo@2x.png 800w,
-                  ../images/logo@3x.png
-                "
-              />
-              <img src="../images/logo.png" alt="logo" />
+              <picture>
+                <source type="image/webp" srcset="../images/logo.webp" />
+                <img src="../images/logo.png" />
+              </picture>
             </a>
             <section class="nav_right_sec" id="nav_right_sec">
               <ul class="nav_menus">
@@ -105,56 +100,55 @@
 
     <main>
       <!-- hero -->
-        <section class="hero hero_bg mb-10">
-          <section class="container">
-            <section class="hero_content">
-              <h1 class="hero_title mb-2">Let us Guide You Home</h1>
-              <p class="hero_desc mb-5">Find the house of your dreams.</p>
-              <ul class="hero_search">
-                <li class="hero_cat">
-                  <select name="house" id="house">
-                    <option value="Rent">Rent</option>
-                    <option value="Sell">Sell</option>
-                    <option value="Buy">Buy</option>
-                  </select>
-                </li>
-  
-                <li class="search_flex">
-                  <svg
-                    version="1.0"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="128.000000pt"
-                    height="128.000000pt"
-                    viewBox="0 0 128.000000 128.000000"
-                    preserveAspectRatio="xMidYMid meet"
+      <section class="hero hero_bg mb-10">
+        <section class="container">
+          <section class="hero_content">
+            <h1 class="hero_title mb-2">Let us Guide You Home</h1>
+            <p class="hero_desc mb-5">Find the house of your dreams.</p>
+            <ul class="hero_search">
+              <li class="hero_cat">
+                <select name="house" id="house">
+                  <option value="Rent">Rent</option>
+                  <option value="Sell">Sell</option>
+                  <option value="Buy">Buy</option>
+                </select>
+              </li>
+
+              <li class="search_flex">
+                <svg
+                  version="1.0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="128.000000pt"
+                  height="128.000000pt"
+                  viewBox="0 0 128.000000 128.000000"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <g
+                    transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
+                    fill="#000000"
+                    stroke="none"
                   >
-                    <g
-                      transform="translate(0.000000,128.000000) scale(0.100000,-0.100000)"
-                      fill="#000000"
-                      stroke="none"
-                    >
-                      <path
-                        d="M390 1264 c-191 -50 -326 -187 -375 -379 -28 -111 -12 -231 45 -345
+                    <path
+                      d="M390 1264 c-191 -50 -326 -187 -375 -379 -28 -111 -12 -231 45 -345
                      36 -71 125 -164 196 -204 158 -90 364 -87 514 8 l55 35 191 -189 c122 -122
                      197 -190 211 -190 24 0 53 30 53 55 0 11 -80 99 -190 209 l-189 191 35 55 c95
                      150 98 356 8 514 -107 189 -350 294 -554 240z m283 -131 c121 -58 206 -169
                      225 -298 41 -266 -187 -494 -453 -453 -129 19 -240 104 -298 225 -29 62 -32
                      76 -32 168 0 91 3 106 31 165 34 73 105 150 168 182 73 38 118 48 206 45 72
                      -2 95 -7 153 -34z"
-                      />
-                    </g>
-                  </svg>
-                  <input
-                    type="text"
-                    class="search-content"
-                    placeholder="Searches for keywords for the Properties"
-                  />
-                </li>
-              </ul>
-            </section>
+                    />
+                  </g>
+                </svg>
+                <input
+                  type="text"
+                  class="search-content"
+                  placeholder="Searches for keywords for the Properties"
+                />
+              </li>
+            </ul>
           </section>
         </section>
-     
+      </section>
 
       <!-- Property -->
       <section class="container">
@@ -162,10 +156,10 @@
           <h4 class="mb-3">Featured Properties</h4>
           <article class="card-container mb-3">
             <section class="villa_sale_card mb-3" id="villa_sale_card">
-              <img
-                src="../images/duncan-kidd-5ZTXJPiEHy0-unsplash.jpg"
-                alt=""
-              />
+              <picture>
+                <source type="image/webp" srcset="../images/home1.webp" />
+                <img src="../images/home1.jpg" alt="home" loading="lazy" />
+              </picture>
               <ul class="villa_detail">
                 <li class="villa_heading text-dark mb-1">
                   Villa With Pool For Sale
@@ -312,10 +306,10 @@
               </ul>
             </section>
             <section class="villa_sale_card mb-3" id="villa_sale_card">
-              <img
-                src="../images/duncan-kidd-5ZTXJPiEHy0-unsplash.jpg"
-                alt=""
-              />
+              <picture>
+                <source type="image/webp" srcset="../images/home2.webp" />
+                <img src="../images/home2.jpg" alt="home" loading="lazy" />
+              </picture>
               <ul class="villa_detail">
                 <li class="villa_heading text-dark mb-1">
                   Villa With Pool For Sale
@@ -462,10 +456,10 @@
               </ul>
             </section>
             <section class="villa_sale_card mb-3" id="villa_sale_card">
-              <img
-                src="../images/duncan-kidd-5ZTXJPiEHy0-unsplash.jpg"
-                alt=""
-              />
+              <picture>
+                <source type="image/webp" srcset="../images/home3.webp" />
+                <img src="../images/home3.jpg" alt="home" loading="lazy" />
+              </picture>
               <ul class="villa_detail">
                 <li class="villa_heading text-dark mb-1">
                   Villa With Pool For Sale
@@ -612,10 +606,10 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
               </ul>
             </section>
             <section class="villa_sale_card mb-3" id="villa_sale_card">
-              <img
-                src="../images/duncan-kidd-5ZTXJPiEHy0-unsplash.jpg"
-                alt=""
-              />
+              <picture>
+                <source type="image/webp" srcset="../images/home4.webp" />
+                <img src="../images/home4.jpg" alt="home" loading="lazy" />
+              </picture>
               <ul class="villa_detail">
                 <li class="villa_heading text-dark mb-1">
                   Villa With Pool For Sale
@@ -762,10 +756,10 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
               </ul>
             </section>
             <section class="villa_sale_card mb-3" id="villa_sale_card">
-              <img
-                src="../images/duncan-kidd-5ZTXJPiEHy0-unsplash.jpg"
-                alt=""
-              />
+              <picture>
+                <source type="image/webp" srcset="../images/home5.webp" />
+                <img src="../images/home5.jpg" alt="home" loading="lazy" />
+              </picture>
               <ul class="villa_detail">
                 <li class="villa_heading text-dark mb-1">
                   Villa With Pool For Sale
@@ -912,10 +906,10 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
               </ul>
             </section>
             <section class="villa_sale_card mb-3" id="villa_sale_card">
-              <img
-                src="../images/duncan-kidd-5ZTXJPiEHy0-unsplash.jpg"
-                alt=""
-              />
+              <picture>
+                <source type="image/webp" srcset="../images/home6.webp" />
+                <img src="../images/home6.jpg" alt="home" loading="lazy" />
+              </picture>
               <ul class="villa_detail">
                 <li class="villa_heading text-dark mb-1">
                   Villa With Pool For Sale
@@ -1062,7 +1056,9 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
               </ul>
             </section>
           </article>
-          <a href="javascript:void(0);" class="btn-primary"> All Property </a>
+          <a href="https://www.google.com/" class="btn-primary">
+            All Property
+          </a>
         </section>
       </section>
 
@@ -1083,7 +1079,9 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
               Let us create a tailored strategic marketing plan and keep track
               of the selling process.
             </p>
-            <a href="javascript:void(0);" class="contact-btn"> Contact us</a>
+            <a href="https://www.google.com/" class="contact-btn">
+              Contact us</a
+            >
           </li>
         </ul>
       </section>
@@ -1240,12 +1238,15 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
               </li>
             </ul>
             <div class="villa_detail_card">
-              <img src="../images/profile.png" alt="" />
+              <picture>
+                <source type="image/webp" srcset="../images/profile.webp" />
+                <img src="../images/profile.png" alt="villa" loading="lazy" />
+              </picture>
               <ul>
                 <li class="text-muted mb-1">Opi Watihana</li>
                 <li class="text-muted">Sales Manager</li>
               </ul>
-              <a href="javascript:void(0);" class="btn-primary">contact</a>
+              <a href="https://www.google.com/" class="btn-primary">contact</a>
             </div>
           </div>
         </section>
@@ -1258,7 +1259,10 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
         <div class="swiper-wrapper card-box">
           <!-- Slides -->
           <div class="swiper-slide">
-            <img src="../images/profile.png" alt="" />
+            <picture>
+              <source type="image/webp" srcset="../images/profile.webp" />
+              <img src="../images/profile.png" alt="profile" loading="lazy" />
+            </picture>
             <h3>Bansilal Brata</h3>
             <p>
               Have you ever heard the expression, “Do not count your chickens
@@ -1272,7 +1276,10 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
             </p>
           </div>
           <div class="swiper-slide">
-            <img src="../images/profile.png" alt="" />
+            <picture>
+              <source type="image/webp" srcset="../images/profile.webp" />
+              <img src="../images/profile.png" alt="profile" loading="lazy" />
+            </picture>
             <h3>Oluchi Mazi</h3>
             <p>
               The popularity of breakfast foods is a good reason to keep
@@ -1283,7 +1290,10 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
             </p>
           </div>
           <div class="swiper-slide">
-            <img src="../images/profile.png" alt="" />
+            <picture>
+              <source type="image/webp" srcset="../images/profile.webp" />
+              <img src="../images/profile.png" alt="profile" loading="lazy" />
+            </picture>
             <h3>Fariba Mirzaii</h3>
             <p>
               If there is one thing kids love more than eating pizza, it’s being
@@ -1296,7 +1306,10 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
             </p>
           </div>
           <div class="swiper-slide">
-            <img src="../images/profile.png" alt="" />
+            <picture>
+              <source type="image/webp" srcset="../images/profile.webp" />
+              <img src="../images/profile.png" alt="profile" loading="lazy" />
+            </picture>
             <h3>Oluchi Mazi</h3>
             <p>
               The popularity of breakfast foods is a good reason to keep
@@ -1307,21 +1320,34 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
             </p>
           </div>
           <div class="swiper-slide">
-            <img src="../images/profile.png" alt="" />
+            <picture>
+              <source type="image/webp" srcset="../images/profile.webp" />
+              <img src="../images/profile.png" alt="profile" loading="lazy" />
+            </picture>
             <h3>Ravag Disa</h3>
             <p>
-                Have you ever heard the expression, “Do not count your chickens before they hatch?” Maybe an older, wiser individual would tell you this to keep you from getting ahead of yourself. Like buying a new car before you actually got that new job. Well, when setting and obtaining your goals, you need to “Count your chicken before they hatch” in your mind. What I mean by this is you have to start seeing yourself completing or obtaining your goal. What you profess, you possess!
+              Have you ever heard the expression, “Do not count your chickens
+              before they hatch?” Maybe an older, wiser individual would tell
+              you this to keep you from getting ahead of yourself. Like buying a
+              new car before you actually got that new job. Well, when setting
+              and obtaining your goals, you need to “Count your chicken before
+              they hatch” in your mind. What I mean by this is you have to start
+              seeing yourself completing or obtaining your goal. What you
+              profess, you possess!
             </p>
           </div>
           <div class="swiper-slide">
-            <img src="../images/profile.png" alt="" />
+            <picture>
+              <source type="image/webp" srcset="../images/profile.webp" />
+              <img src="../images/profile.png" alt="profile" loading="lazy" />
+            </picture>
             <h3>Teyame Uchs</h3>
             <p>
-                The popularity of breakfast foods is a good reason to keep
-                dependable starters, such as eggs, bread and other staples, on
-                hand. But why reserve them only for morning meals? Planning
-                breakfast for dinner is a good way to serve up simple, satisfying
-                evening meals without spending a lot of time in the kitchen.
+              The popularity of breakfast foods is a good reason to keep
+              dependable starters, such as eggs, bread and other staples, on
+              hand. But why reserve them only for morning meals? Planning
+              breakfast for dinner is a good way to serve up simple, satisfying
+              evening meals without spending a lot of time in the kitchen.
             </p>
           </div>
         </div>
@@ -1330,26 +1356,20 @@ m558 -12 c-3 -7 -11 -13 -18 -13 -7 0 -15 6 -17 13 -3 7 4 12 17 12 13 0 20
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
       </section>
-
-     
     </main>
-     <!-- footer -->
-     <footer class="footer bg-gray text-center mg-auto fx flex-column">
-        <a href="javascript:void(0)" class="mb-4">
-          <source
-            srcset="
-              ../images/logo-copy.png    500w,
-              ../images/logo-copy@2x.png 800w,
-              ../images/logo-copy@3x.png
-            "
-          />
-          <img class="" src="../images/logo-copy.png" alt="logo" />
-        </a>
-        <p class="text-muted text-center mg-auto">
-          Have you ever heard the expression, “Do not count your chickens before
-          they hatch?” Maybe an older, wiser individual would tell you this to
-          keep you from getting ahead of yourself.
-        </p>
-      </footer>
+    <!-- footer -->
+    <footer class="footer bg-gray text-center mg-auto fx flex-column">
+      <a href="https://www.google.com/" class="mb-4">
+        <picture>
+          <source type="image/webp" srcset="../images/logo-copy.webp" />
+          <img src="../images/logo-copy.png" alt="logo" />
+        </picture>
+      </a>
+      <p class="text-muted text-center mg-auto">
+        Have you ever heard the expression, “Do not count your chickens before
+        they hatch?” Maybe an older, wiser individual would tell you this to
+        keep you from getting ahead of yourself.
+      </p>
+    </footer>
   </body>
 </html>

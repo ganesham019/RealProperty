@@ -4,6 +4,7 @@
   "description": "Boiler Plate",
   "main": "index.js",
   "scripts": {
+    "convert": "webpack --config webp.convert.js",
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
   },
@@ -18,12 +19,10 @@
     "@babel/preset-env": "^7.22.6",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
-    "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
-    "node-sass": "^9.0.0",
     "postcss-loader": "^7.3.3",
     "postcss-preset-env": "^9.0.0",
     "sass": "^1.63.6",
