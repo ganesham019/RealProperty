@@ -6,8 +6,8 @@ const navSec = document.getElementById("nav_right_sec");
 const nav = document.querySelector("nav");
 
 window.onscroll = function () {
-    const ScrollHeight = window.scrollY;
-    if (ScrollHeight) {
+    const scrollHeight = window.scrollY;
+    if (scrollHeight) {
         nav.classList.add("navbar-theme");
     } else {
         nav.classList.remove("navbar-theme");
