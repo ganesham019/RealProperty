@@ -1,25 +1,25 @@
 @use "sass:math";
 
-.container{
-    max-width: 1200px;
-    padding: 0px 20px;
-    margin: 0px auto;
+.container {
+  max-width: 1200px;
+  padding: 0px 20px;
+  margin: 0px auto;
 }
-.text-center{
-    text-align: center;
+.text-center {
+  text-align: center;
 }
-.mg-auto{
-    margin: auto;
+.mg-auto {
+  margin: auto;
 }
 
-.fx{
-    display: flex;
+.fx {
+  display: flex;
 }
-.flex-column{
-    flex-direction: column;
+.flex-column {
+  flex-direction: column;
 }
-.mr-auto{
-    margin-right:auto;
+.mr-auto {
+  margin-right: auto;
 }
 
 $utilities: (
@@ -31,7 +31,7 @@ $utilities: (
       3: $base-margin * 3,
       4: $base-margin * 4,
       5: $base-margin * 5,
-      10: $base-margin *10,
+      10: $base-margin * 10,
     ),
   ),
   "margin-bottom": (
@@ -42,7 +42,7 @@ $utilities: (
       3: $base-margin * 3,
       4: $base-margin * 4,
       5: $base-margin * 5,
-      10: $base-margin *10,
+      10: $base-margin * 10,
     ),
   ),
 );
@@ -52,14 +52,8 @@ $utilities: (
   $values: map-get($map, "values");
 
   @each $k, $v in $values {
-    @if ($k == "default") {
-      .#{$prefix} {
-        #{$property}: $v;
-      }
-    } @else {
-      .#{$prefix}-#{$k} {
-        #{$property}: $v;
-      }
+    .#{$prefix}-#{$k} {
+      #{$property}: $v;
     }
   }
 }
@@ -73,8 +67,8 @@ $utilities: (
   }
 }
 
-@include breakpoint(map-get($breakpoints,"tablet")){
-  .mb-10{
+@include breakpoint(map-get($breakpoints, "tablet")) {
+  .mb-10 {
     margin-bottom: 38px;
-}
+  }
 }

@@ -1,16 +1,12 @@
 @import "base/reset";
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
 @import "base/breakpoints";
-@import './base/typography';
+@import "./base/typography";
 @import "./abstracts/variable";
 @import "./abstracts/mixins";
 @import "./base/utility";
-@import './layouts/header';
-@import './layouts/hero';
-@import './layouts/sell';
-@import './layouts/feature';
-@import './layouts/swiper';
-@import './layouts/homesale';
-@import './layouts/footer';
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+// page1
+@import "./pages/index";
